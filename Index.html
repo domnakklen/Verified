@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Verification</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="ccc.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="ccc.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="ccc.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="ccc.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="ccc.png">
+    <link rel="icon" sizes="180x180" href="ccc.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #0d1143;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            /* Adjust the padding as needed */
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        h1 img {
+            width: 150px;
+            /* Adjust the size as needed */
+            height: auto;
+        }
+
+        .slider-container {
+            flex: 1;
+            margin: 0 10px;
+            /* Adjust the margin as needed */
+            position: relative;
+        }
+
+        .slider {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slider img {
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+
+        .info {
+            flex: 1;
+            margin: 0 20px;
+            text-align: justify;
+        }
+
+        .blog-right {
+            flex-basis: 32%;
+        }
+
+        .blog-right h3 {
+            background: #f44336;
+            color: #fff;
+            padding: 7px 0;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .blog-right div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #555;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1><img src="logo.png" alt="Your Logo"></h1>
+    </header>
+
+    <div class="container">
+        <div class="info">
+            <h2 style="color: rgb(30, 255, 0);">PRODUCT VERIFIED</h2>
+            <p style="color: rgb(15, 4, 61);">Ventana Pour Homme by Armaf</p>
+            <p style="color: rgb(15, 4, 61);">Purchase date 01/Jan/2024</p>
+            <p style="color: rgb(15, 4, 61);">100ml Full Box</p>
+            <p style="color: rgb(15, 4, 61);">Price $29</p>
+            <p style="color: rgb(15, 4, 61);">Approve by DomNak Klen</p>
+            <div class="blog-right">
+                <h3 style="cursor: pointer;">Barcode Verification 6294015102260</h3>
+
+                <div>
+                    <span​ style="color: #f44336; font-size: 18px; cursor: pointer;"><b>ផលិតផលមួយនេះត្រូវបានបញ្ជាក់ដោយ ដំណាក់ ក្លិន</b></span>
+                </div>
+    
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="slider-container">
+        <div class="slider">
+            <img src="img1.png" alt="Image 1">
+            <img src="img2.png" alt="Image 2">
+            <img src="img3.png" alt="Image 3">
+            <img src="img4.png" alt="Image 4">
+            <!-- Add more images as needed -->
+        </div>
+    </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slider img');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+            });
+        }
+
+        // Show the first slide when the page loads
+        showSlide(currentSlide);
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Auto-play the slider
+        setInterval(nextSlide, 5000); // Change the interval as needed
+    </script>
+</body>
+
+</html>
